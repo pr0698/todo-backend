@@ -1,19 +1,23 @@
 const express = require('express');
 const app =  express();
-const {createTodo, updateToDo} = require('./types')
+const {createTodo, updateToDo} = require('./types');
+const {Todo} = require('./db');
+console.log(createTodo);
 app.use(express.json());
 
 
 app.post('/todo', async function(req,res){
    const createPayload = req.body;
+   console.log(createPayload);
    const parsedPayload = createTodo.safeParse(createPayload);
+   console.log(parsedPayload);
    if(!parsedPayload.success){
     res.status(411).json({
         msg: "You sent wrong inputs"
     })
     return;
    }
-   await  todo.create({
+   const updateToDo = await Todo.create({
     title: createPayload.title,
     description: createPayload.description,
     completed:false,
