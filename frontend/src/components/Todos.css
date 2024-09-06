@@ -1,0 +1,51 @@
+/* Style the container for the list of todos */
+.todos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between each todo item */
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* Style each todo item */
+  .todo-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the title of the todo */
+  .todo-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the description of the todo */
+  .todo-description {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  /* Style the button */
+  .todo-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .todo-button.completed {
+    background-color: #28a745;
+  }
+  
+  .todo-button:hover {
+    opacity: 0.8;
+  }
+  
